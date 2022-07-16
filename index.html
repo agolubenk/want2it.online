@@ -1794,6 +1794,11 @@ a.preicons
     </style>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 <link href="form-validation.css" rel="stylesheet">
+	 <style>
+	  .custom-tooltip {
+  --bs-tooltip-bg: var(--bs-primary);
+}
+	  </style>
   </head>
   <body>
 
@@ -1886,7 +1891,7 @@ a.preicons
   <div class="toast-header h5 text-bg-primary">
     <i class="bi bi-trophy-fill text-warning fa-lg"></i>&nbsp;
     <strong class="me-auto lang-22"data-label="Quality">Качество</strong>
-    <small data-bs-toggle="tooltip" data-bs-placement="top" title="Гарантийные замены в нашем случае - это редкое исключение"><i class="bi bi-question-circle"></i></small>
+    <small data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Гарантийные замены в нашем случае - это редкое исключение"><i class="bi bi-question-circle"></i></small>
   </div>
   <div class="toast-body lang-23" style="margin-top: -15px;" data-label="We know where to look for experienced and qualified employees who are able to solve your problems.">
     Мы знаем где искать опытных и квалифицированных сотрудников, которые в состоянии решить Ваши задачи.
@@ -1895,7 +1900,7 @@ a.preicons
   <div class="toast-header h5 text-bg-primary">
     <i class="bi bi-speedometer text-warning fa-lg"></i>&nbsp;
     <strong class="me-auto lang-24" data-label="Velocity">Скорость</strong>
-    <small data-bs-toggle="tooltip" data-bs-placement="top" title="Мы делаем все, чтобы сотрудник вышел в кратайшие сроки"><i class="bi bi-question-circle"></i></small>
+    <small data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Мы делаем все, чтобы сотрудник вышел в кратайшие сроки"><i class="bi bi-question-circle"></i></small>
   </div>
   <div class="toast-body lang-25" data-label="In addition to high-quality selection, we are also as fast as possible! Each vacancy of a partner is a priority for us." style="margin-top: -15px;">
     Помимо качественного подбора мы еще и максимально быстрые! Для нас приоритетна каждая вакансия партнера.
@@ -1904,7 +1909,7 @@ a.preicons
   <div class="toast-header h5 text-bg-primary">
     <i class="bi bi-briefcase-fill text-warning fa-lg"></i>&nbsp;
     <strong class="me-auto lang-26" data-label="Efficiency">Результативность</strong>
-    <small data-bs-toggle="tooltip" data-bs-placement="top" title="Наши опыт и проффесионализм в закрытии вакансий позволяют показывать отличные результаты"><i class="bi bi-question-circle"></i></small>
+    <small data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Наши опыт и проффесионализм в закрытии вакансий позволяют показывать отличные результаты"><i class="bi bi-question-circle"></i></small>
   </div>
   <div class="toast-body lang-27" style="margin-top: -15px;" data-label="We are looking for specialists of different levels of complexity, based on our experience and professionalism.">
     Мы ведем поиск специалистов разного уровня сложности, опираясь на наши опыт и профессионализм.
@@ -1913,7 +1918,7 @@ a.preicons
   <div class="toast-header h5 text-bg-primary">
     <i class="bi bi-bug-fill text-warning fa-lg"></i>&nbsp;
     <strong class="me-auto lang-28" data-label="Agile">Гибкий подход</strong>
-    <small data-bs-toggle="tooltip" data-bs-placement="top" title="Индивидуальный и нестандартный подход позволяют закрыть вакансию в кратчайшие сроки"><i class="bi bi-question-circle"></i></small>
+    <small data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Индивидуальный и нестандартный подход позволяют закрыть вакансию в кратчайшие сроки"><i class="bi bi-question-circle"></i></small>
   </div>
   <div class="toast-body lang-29" style="margin-top: -15px;" data-label="We take into account both professional skills and personal qualities of the employee and the microclimate in the company.">
     Мы учитываем как профессиональные навыки, так и личностные качества сотрудника и микроклимат в компании.
@@ -1970,21 +1975,21 @@ a.preicons
 					  
 					  
       <form action="" onsubmit="return sendtelegram()" class="container">
-		  <div class="input-group mb-3 rounded-5">
-				<label class="input-group-text text-warning border-white lang-32" data-label="Name" style="background-color: transparent; width: 100px; border-radius: 24px 0px 0px 24px;" for="inputGroupSelect01">Ваше имя</label>
-            <input type="text" class="form-control  form-control-lg text-white border-white" min="3" id="NameInput1" name="name" style="border-radius: 0px 24px 24px 0px; background-color: transparent" placeholder="Фамилия Имя" required>
+		  <div class="input-group mb-3 rounded-5" data-bs-toggle="tooltip" data-bs-placement="top" title="Как мы можем к Вам обращаться?">
+				<label class="input-group-text text-warning border-white lang-32" data-label="Name" style="background-color: transparent; width: 100px; border-radius: 24px 0px 0px 24px;" for="inputGroupSelect01"><b>Ваше имя</b></label>
+            <input type="text" class="form-control  form-control-lg text-white border-white" min="3" id="NameInput1" name="name" style="border-radius: 0px 24px 24px 0px; background-color: transparent" required>
 			 </div>
-        <div class="input-group mb-3 rounded-5">
-				<label class="input-group-text text-warning border-white lang-50" data-label="Contacts" style="background-color: transparent; width: 100px; border-radius: 24px 0px 0px 24px;" for="inputGroupSelect01">Контакты</label>
-            <input type="text" class="form-control form-control-lg text-white border-white" value="" id="TelInput1" name="tel" style="border-radius: 0px 24px 24px 0px; background-color: transparent" placeholder="Фамилия Имя" required>
+        <div class="input-group mb-3 rounded-5" data-bs-toggle="tooltip" data-bs-placement="top" title="Укажите номер телефона, telegram или linkedin">
+				<label class="input-group-text text-warning border-white lang-50" data-label="Contacts" style="background-color: transparent; width: 100px; border-radius: 24px 0px 0px 24px;" for="inputGroupSelect01"><b>Контакты</b></label>
+            <input type="text" class="form-control form-control-lg text-white border-white" value="" id="TelInput1" name="tel" style="border-radius: 0px 24px 24px 0px; background-color: transparent" required>
 			 </div>	  
-			<div class="input-group mb-3 rounded-5">
-				<label class="input-group-text text-warning border-white" style="background-color: transparent;width: 100px; border-radius: 24px 0px 0px 24px;" for="inputGroupSelect01">E-mail</label>
-            <input type="email" class="form-control form-control-lg  text-white border-white" style="border-radius: 0px 24px 24px 0px;background-color: transparent; "  id="howmatchInput1" name="peoples" placeholder="Email" required>
+			<div class="input-group mb-3 rounded-5" data-bs-toggle="tooltip" data-bs-placement="top" title="Мы отправим Вам коммерческое предложение">
+				<label class="input-group-text text-warning border-white" style="background-color: transparent;width: 100px; border-radius: 24px 0px 0px 24px;" for="inputGroupSelect01"><b>E-mail</b></label>
+            <input type="email" class="form-control form-control-lg  text-white border-white" style="border-radius: 0px 24px 24px 0px;background-color: transparent; "  id="howmatchInput1" name="peoples"  required>
 			 </div>
-            <div class="form-floating mb-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Укажите информацию, которая Вас интересует, название компании и другое. Информация, которую Вы укажите, ускорит решение Вашего вопроса.">
+            <div class="form-floating mb-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Опишите детали и вопросы, с которыми столкнулись в работе.">
               <textarea type="text" rows="5" class="form-control text-white border-white" id="floatingTextarea1" name="comment" style="height: 140px; border-radius: 24px 24px 24px 24px;background-color: transparent; " placeholder="Стек" required min="20"></textarea>
-            <label for="floatingInput3" class="text-warning lang-33" data-label="Comment">Комментарий</label>
+            <label for="floatingInput3" class="text-warning lang-33" data-label="Comment"><b>Комментарий</b></label>
           </div> 
         	<button type="submit" class="w-100 orderbtn btn btn-lg  border-white rounded-5 lang-34 send-them" name="submit" id="submit2" value="Submit" onsubmit="return sendtelegram()" data-label="Confirm">Подтвердить</button>
 
@@ -2280,22 +2285,22 @@ var params = window.location.search.replace('?','').split('&').reduce(
           function about(){
               let bc = $(document.documentElement).attr('data-theme');
               let bd = $(document.documentElement).attr('data-label');
-              window.location.href='skills.html?theme='+bc+'&lang='+bd;
+              window.location.href='about.html?theme='+bc+'&lang='+bd;
           };
           function prices(){
               let bc = $(document.documentElement).attr('data-theme');
               let bd = $(document.documentElement).attr('data-label');
-              window.location.href='experience.html?theme='+bc+'&lang='+bd;
+              window.location.href='prices.html?theme='+bc+'&lang='+bd;
           };
           function vacancy(){
               let bc = $(document.documentElement).attr('data-theme');
               let bd = $(document.documentElement).attr('data-label');
-              window.location.href='about.html?theme='+bc+'&lang='+bd;
+              window.location.href='vacancy.html?theme='+bc+'&lang='+bd;
           };
           function joinus(){
               let bc = $(document.documentElement).attr('data-theme');
               let bd = $(document.documentElement).attr('data-label');
-              window.location.href='about.html?theme='+bc+'&lang='+bd;
+              window.location.href='joinus.html?theme='+bc+'&lang='+bd;
           };
           function blog(){
               let bc = $(document.documentElement).attr('data-theme');
@@ -2305,7 +2310,7 @@ var params = window.location.search.replace('?','').split('&').reduce(
           function documents(){
               let bc = $(document.documentElement).attr('data-theme');
               let bd = $(document.documentElement).attr('data-label');
-              window.location.href='about.html?theme='+bc+'&lang='+bd;
+              window.location.href='documents.html?theme='+bc+'&lang='+bd;
           };
       </script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script>
