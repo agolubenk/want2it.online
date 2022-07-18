@@ -765,7 +765,7 @@ a.preicons
             --label-color: #555;
             --card-border-color: silver;
             --card-element-hover: #f1f1f1;
-            --select-color: rgb(169, 222, 255);
+            --select-color: rgb(18 149 231);
             --bg-ltg: #bbffbe;
             --page-link-color: #007bff;
             --page-link-border-color: #dee2e6;
@@ -1994,7 +1994,7 @@ a.preicons
               <textarea type="text" rows="5" class="form-control text-white border-white" id="floatingTextarea1" name="comment" style="height: 140px; border-radius: 24px 24px 24px 24px;background-color: transparent; " placeholder="Стек" required min="20"></textarea>
             <label for="floatingInput3" class="text-warning lang-33" data-label="Comment"><b>Комментарий</b></label>
           </div> 
-        	<button type="submit" class="w-100 orderbtn btn btn-lg  border-white rounded-5 lang-34 send-them" name="submit" id="submit2" value="Submit" onsubmit="return sendtelegram()" data-label="Confirm">Подтвердить</button>
+        	<button type="submit" class="w-100 orderbtn btn btn-lg  border-white rounded-5 lang-34 send-them" disabled name="submit" id="submit2" value="Submit" onsubmit="return sendtelegram()" data-label="Confirm">Подтвердить</button>
 
       </form>
 		  </div>
@@ -2067,7 +2067,7 @@ a.preicons
           <div class="d-flex w-100"> 
             <label for="newsletter1" class="visually-hidden">E-mail OR @telegram</label>
             <input id="newsletter1" name="newLette" type="text" class="form-control text-warning" style="height: 48px; border-radius: 24px 24px 24px 24px; background-color: transparent; border-color: #ffffff" placeholder="@telegram"  required>
-            <button class="btn btn-warning send-them" name="submit" id="submit3" value="Submit" type="submit"  onsubmit="return sendtelegram2()" style="height: 48px; width: 140px; border-radius: 24px 24px 24px 24px; margin-left: -138px"><b class="lang-48"  data-label="Send">Отправить</b> <i class="bi bi-send fa-lg"></i></button>
+            <button class="btn btn-warning send-them" disabled name="submit" id="submit3" value="Submit" type="submit"  onsubmit="return sendtelegram2()" style="height: 48px; width: 140px; border-radius: 24px 24px 24px 24px; margin-left: -138px"><b class="lang-48"  data-label="Send">Отправить</b> <i class="bi bi-send fa-lg"></i></button>
           </div>
         </form>
       </div>
@@ -2123,6 +2123,34 @@ a.preicons
 
 <script src="form-validation.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+      const checkLength = function(evt) {
+  if (phoneField.value.length >= 5) {
+  	button.removeAttribute('disabled')
+  };
+}
+      const checkLength1 = function(evt) {
+  if (oneField.value.length >= 3) {
+  	  if (twoField.value.length >= 5) {
+  	      if (treField.value.length >= 6) {
+  	         button2.removeAttribute('disabled')
+          };
+      };
+  };
+}
+
+const phoneField = document.querySelector('input[name="newLette"]')
+const button = document.querySelector('button[id="submit3"]')
+
+const oneField = document.querySelector('input[name="name"]')
+const twoField = document.querySelector('input[name="tel"]')
+const treField = document.querySelector('input[name="peoples"]')
+const button2 = document.querySelector('button[id="submit2"]')
+phoneField.addEventListener('keyup', checkLength)
+oneField.addEventListener('keyup', checkLength1)
+twoField.addEventListener('keyup', checkLength1)
+treField.addEventListener('keyup', checkLength1)
+      </script>
       <script>
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
@@ -2327,7 +2355,7 @@ var ready = function() {
     tel = document.getElementById("TelInput1").value;
     hwm = document.getElementById("howmatchInput1").value;
     message = document.getElementById("floatingTextarea1").value;
-    message = "Имя: " + u_name + "\nТелефон: " + tel + "\nДата: " + hwm + "\nИнформация: " + message;
+    message = "Имя: " + u_name + "\nТелефон: @" + tel + "\nДата: " + hwm + "\nИнформация: " + message;
 };
 var sendtelegram = function() {
     ready();
