@@ -2044,7 +2044,7 @@ a.preicons
         <div class="row mx-auto">
             <div class="col-md-8 col-md-offset-2 mx-auto">
                                 
-                <div class="fresh-table">
+                <div class="fresh-table full-color-blue" id="table-color">
                 <!--    Available colors for the full background: full-color-blue, full-color-azure, full-color-green, full-color-red, full-color-orange                  
                         Available colors only for the toolbar: toolbar-color-blue, toolbar-color-azure, toolbar-color-green, toolbar-color-red, toolbar-color-orange
                 -->
@@ -2060,7 +2060,7 @@ a.preicons
                         </thead>
                         <tbody>
                             <tr>
-                            	<td><a class="link-primary" onclick="vacancy123()">Java developer</a></td>
+                            	<td><a class="nav-link" onclick="vacancy123()">Java developer</a></td>
                             	<td>$2000-6000</td>
                             	<td>middle</td>
                             	<td>4</td>
@@ -2072,7 +2072,7 @@ a.preicons
                             </tr>
 
                             <tr>
-                            	<td><a class="link-primary" onclick="vacancy123()">PHP developer</a></td>
+                            	<td><a class="nav-link" onclick="vacancy123()">PHP developer</a></td>
                             	<td>$1800-2700</td>
                             	<td>middle</td>
                             	<td>2</td>
@@ -2084,7 +2084,7 @@ a.preicons
                             </tr>
 
                             <tr>
-                            	<td><a class="link-primary" onclick="vacancy123()">DevOps engineer</a></td>
+                            	<td><a class="nav-link" onclick="vacancy123()">DevOps engineer</a></td>
                             	<td>$2000-5500</td>
                             	<td>middle</td>
                             	<td>3</td>
@@ -2096,7 +2096,7 @@ a.preicons
                             </tr>
 
                             <tr>
-                            	<td><a class="link-primary" onclick="vacancy123()">Java team lead</a></td>
+                            	<td><a class="nav-link" onclick="vacancy123()">Java team lead</a></td>
                             	<td>$4000-7500</td>
                             	<td>team-lead</td>
                             	<td>1</td>
@@ -2108,7 +2108,7 @@ a.preicons
                             </tr>
 
                             <tr>
-                            	<td><a class="link-primary" onclick="vacancy123()">Java developer</a></td>
+                            	<td><a class="nav-link" onclick="vacancy123()">Java developer</a></td>
                             	<td>$2000-6000</td>
                             	<td>middle</td>
                             	<td>4</td>
@@ -2120,7 +2120,7 @@ a.preicons
                             </tr>
 
                             <tr>
-                            	<td><a class="link-primary" onclick="vacancy123()">Java developer</a></td>
+                            	<td><a class="nav-link" onclick="vacancy123()">Java developer</a></td>
                             	<td>$2000-6000</td>
                             	<td>middle</td>
                             	<td>4</td>
@@ -2132,7 +2132,7 @@ a.preicons
                             </tr>
 
                             <tr>
-                            	<td><a class="link-primary" onclick="vacancy123()">Java developer</a></td>
+                            	<td><a class="nav-link" onclick="vacancy123()">Java developer</a></td>
                             	<td>$2000-6000</td>
                             	<td>senior</td>
                             	<td>4</td>
@@ -2144,7 +2144,7 @@ a.preicons
                             </tr>
 
                             <tr>
-                            	<td><a class="link-primary" onclick="vacancy123()">Java developer</a></td>
+                            	<td><a class="nav-link" onclick="vacancy123()">Java developer</a></td>
                             	<td>$2000-6000</td>
                             	<td>middle</td>
                             	<td>4</td>
@@ -2156,7 +2156,7 @@ a.preicons
                             </tr>
 
                             <tr>
-                            	<td><a class="link-primary" onclick="vacancy123()">Java developer</a></td>
+                            	<td><a class="nav-link" onclick="vacancy123()">Java developer</a></td>
                             	<td>$2000-6000</td>
                             	<td>middle</td>
                             	<td>4</td>
@@ -2585,6 +2585,7 @@ var params = window.location.search.replace('?','').split('&').reduce(
             }
             $(".moon")[0].innerHTML = '<i class="fa fa-sun-o text-warning fa-lg"></i>';
             $("#theme-swith-1")[0].toggleClass('fa fa-sun-o text-warning bi bi-moon-stars-fill text-primary');
+            $("#table-color")[0].toggleClass(' full-color-orange full-color-blue');
             $('#theme-swith').attr('data-label', "dark");
         }
         else {
@@ -2595,6 +2596,7 @@ var params = window.location.search.replace('?','').split('&').reduce(
             }
             $("#theme-swith")[0].innerHTML = '<i class="bi bi-moon-stars-fill text-primary fa-lg"></i>';
             $("#theme-swith-1")[0].toggleClass('fa fa-sun-o text-warning bi bi-moon-stars-fill text-primary');
+            $("#table-color")[0].toggleClass(' full-color-blue full-color-orange');
             $('#theme-swith').attr('data-label', "light");
         }
         if (ab === 'en') {
@@ -2661,6 +2663,11 @@ var params = window.location.search.replace('?','').split('&').reduce(
               let bc = $(document.documentElement).attr('data-theme');
               let bd = $(document.documentElement).attr('data-label');
               window.location.href='documents.html?theme='+bc+'&lang='+bd;
+          };
+          function vacancy123(){
+              let bc = $(document.documentElement).attr('data-theme');
+              let bd = $(document.documentElement).attr('data-label');
+              window.location.href='vacancy-2204171.html?theme='+bc+'&lang='+bd;
           };
       </script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script>
