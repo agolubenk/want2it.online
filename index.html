@@ -685,63 +685,8 @@ a.preicons
             --block-verbose-background: #f7f7f7;
             --theme: "\f186";
             --card-title-color: #6f6f6f;
-            --body-background-color: linear-gradient(155deg, #DEB887 8.33%, #808080 38.33%, #2F4F4F 63.33%); ;
+            --body-background-color: linear-gradient(155deg, #470082 8.33%, #232323 38.33%, #000000 63.33%);;
             --map-dot-color: #2196f3;
-            --body-color: #444;
-            --map-background-color: whitesmoke;
-            --card-background-color: white;
-            --card-border: 0em;
-            --map-border-color: silver;
-            --card-border-shadow: 0 1px 3px #999;
-            --card-text-color: black;
-            --card-line-color: #f1f1f1;
-            --footer-line-color: #000;
-            --footer-text-color: #000;
-            --footer-b-color: #111111;
-            --footer-background-color: transparent!important;
-            --navbar-background-color: #e55343;
-            --shopcart-background-color: #f66454;
-            --header-background-color: #f0f1f1;
-            --grid-line-color: silver;
-            --bar-color: rgb(124, 181, 236);
-            --link-color: #0dcaf0;
-            --label-color: #555;
-            --card-border-color: silver;
-            --card-element-hover: #f1f1f1;
-            --select-color: rgb(169, 222, 255);
-            --bg-ltg: #bbffbe;
-            --page-link-color: #007bff;
-            --page-link-border-color: #dee2e6;
-            --page-link-active-color: #007bff;
-            --value-color: black;
-            --nav-links-color: #ffffff;
-            --dropdown-hover-color: #eeeeee;
-            --ttp-bg-color: #212121;
-            --ttp-color: #ffffff;
-        }
-
-        html[data-theme='dark'] {
-            --timeline-color-arround: rgb(81, 66, 40);
-            --timeline-width: 1px;
-            --timeline-height: 0.10em;
-            --block-verbose-shadow: none;
-            --radio-active: #014c8e;
-            --radio-inactive: #37474f;
-            --page-link-background: #37474f;
-            --page-link-color: white;
-            --block-number: white !important;
-            --block-verbose-border: 0.05em solid #38444d;
-            --timeline-color: rgb(255, 174, 1);
-            --bottom-background-color: transparent;
-            --bottom-color: #38444d;
-            --bottom-border: 1px solid #38444d;
-            --green: rgb(114, 248, 120) !important;
-            --red-amount-tail-zero: #e57373 !important;
-            --map-background-color: #555f6b;
-            --block-verbose-background: #111922;
-            --map-border-color: #444;
-            --map-dot-color: #ff810c;
-            --body-background-color: linear-gradient(155deg, #470082 8.33%, #232323 38.33%, #000000 63.33%);
             --body-color: #d1d1d1;
             --card-background-color: #021624;
             --card-border-color: #38444d;
@@ -777,6 +722,59 @@ a.preicons
             --dropdown-hover-color: #38444d;
             --ttp-bg-color: #ffffff;
             --ttp-color: #212121;
+        }
+
+        html[data-theme='dark'] {
+            --timeline-color-arround: rgb(81, 66, 40);
+            --timeline-width: 1px;
+            --timeline-height: 0.10em;
+            --block-verbose-shadow: none;
+            --radio-active: #014c8e;
+            --radio-inactive: #37474f;
+            --page-link-background: #37474f;
+            --page-link-color: white;
+            --block-number: white !important;
+            --block-verbose-border: 0.05em solid #38444d;
+            --timeline-color: rgb(255, 174, 1);
+            --bottom-background-color: transparent;
+            --bottom-color: #38444d;
+            --bottom-border: 1px solid #38444d;
+            --green: rgb(114, 248, 120) !important;
+            --red-amount-tail-zero: #e57373 !important;
+            --map-background-color: #555f6b;
+            --block-verbose-background: #111922;
+            --map-border-color: #444;
+            --map-dot-color: #ff810c;
+            --body-background-color: linear-gradient(155deg, #DEB887 8.33%, #808080 38.33%, #2F4F4F 63.33%);
+            --card-background-color: white;
+            --card-border: 0em;
+            --map-border-color: silver;
+            --card-border-shadow: 0 1px 3px #999;
+            --card-text-color: black;
+            --card-line-color: #f1f1f1;
+            --footer-line-color: #000;
+            --footer-text-color: #000;
+            --footer-b-color: #111111;
+            --footer-background-color: transparent!important;
+            --navbar-background-color: #e55343;
+            --shopcart-background-color: #f66454;
+            --header-background-color: #f0f1f1;
+            --grid-line-color: silver;
+            --bar-color: rgb(124, 181, 236);
+            --link-color: #0dcaf0;
+            --label-color: #555;
+            --card-border-color: silver;
+            --card-element-hover: #f1f1f1;
+            --select-color: rgb(169, 222, 255);
+            --bg-ltg: #bbffbe;
+            --page-link-color: #007bff;
+            --page-link-border-color: #dee2e6;
+            --page-link-active-color: #007bff;
+            --value-color: black;
+            --nav-links-color: #ffffff;
+            --dropdown-hover-color: #eeeeee;
+            --ttp-bg-color: #212121;
+            --ttp-color: #ffffff;
         }
 
 
@@ -2004,11 +2002,11 @@ a.preicons
 		  </div>
 	  
 <div class="toast-container position-fixed top-0 end-0 p-3">
-<div class="toast" id="liveToast" role="alert" aria-live="assertive" aria-atomic="true">
-  <div class="toast-header">
+<div class="toast bg-dark text-white nav-link" id="liveToast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header bg-warning text-dark">
     <i class="bi bi-robot rounded me-2"></i>
     <strong class="me-auto lang-51" data-label="Bot Want 2 IT">Бот Want 2 IT</strong>
-    <small class="text-muted">1 sec</small>
+    <small class="text-muted">now</small>
     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
   </div>
   <div class="toast-body lang-52" data-label="Your application is accepted! You will be contacted shortly!">
@@ -2067,20 +2065,20 @@ a.preicons
           <h5 class="text-warning lang-46" data-label="Asq a question:">По всем вопросам:</h5>
           <p class="text-white lang-47" data-label="Share your contact info and we write.">Укажите свои контакты, чтобы мы связались с Вами.</p>
           <div class="d-flex w-100"> 
-            <label for="newsletter1" class="visually-hidden">E-mail OR @telegram OR +375</label>
-            <input id="newsletter1" name="newLette" type="text" class="form-control text-warning" style="height: 48px; border-radius: 24px 24px 24px 24px; background-color: transparent; border-color: #ffffff" placeholder="@telegram OR example@mail.com">
+            <label for="newsletter1" class="visually-hidden">E-mail OR @telegram</label>
+            <input id="newsletter1" name="newLette" type="text" class="form-control text-warning" style="height: 48px; border-radius: 24px 24px 24px 24px; background-color: transparent; border-color: #ffffff" placeholder="@telegram"  required>
             <button class="btn btn-warning send-them" name="submit" id="submit3" value="Submit" type="submit"  onsubmit="return sendtelegram2()" style="height: 48px; width: 140px; border-radius: 24px 24px 24px 24px; margin-left: -138px"><b class="lang-48"  data-label="Send">Отправить</b> <i class="bi bi-send fa-lg"></i></button>
           </div>
         </form>
       </div>
     </div>
 <div class="toast-container position-fixed top-0 end-0 p-3">
-<div class="toast" id="liveToast2" role="alert" aria-live="assertive" aria-atomic="true">
-  <div class="toast-header">
-    <i class="bi bi-robot rounded me-2"></i>
+<div class="toast bg-dark text-white nav-link border border-white border-1" id="liveToast2" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header bg-dark text-white nav-link border border-white border-1">
+    <i class="bi bi-robot rounded me-2 fa-lg"></i>
     <strong class="me-auto lang-53" data-label="Bot Want 2 IT">Бот Want 2 IT</strong>
-    <small class="text-muted">1 sec</small>
-    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+    <small class="text-muted">now</small>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Закрыть"></button>
   </div>
   <div class="toast-body lang-54" data-label="We have received your contacts and will contact you as soon as possible!">
     Мы получили Ваши контакты с свяжемся с Вами в ближайшее время!
@@ -2364,7 +2362,7 @@ var chat_id1 = -1001423432956;
 var neww;
 var readyy = function() {
     neww = document.getElementById("newsletter1").value;
-    message1 = "Запрос из футера " + neww;
+    message1 = "Запрос из футера @" + neww;
 };
 var sendtelegram2 = function() {
     readyy();
