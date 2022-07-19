@@ -656,12 +656,13 @@ a.preicons
 /* Стили для скролла */
 ::-webkit-scrollbar {
  width: 6px;
+ height: 6px;
 } 
 ::-webkit-scrollbar-track {
- box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+ box-shadow: inset 0 0 6px rgba(255,255,255,0.3); 
 } 
 ::-webkit-scrollbar-thumb {
- box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+ box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
         html, body {
             margin: 0;
@@ -1850,7 +1851,7 @@ a.preicons
         <div class="d-block d-flex justify-content-between d-lg-none pt-3">
             
     <a class="navbar-brand text-white" style="margin-top: -9px;" onclick="index()"><img class="" height="38px" src="assets/img/big-logo.png" alt="">&nbsp;<small class="lang-10 align-bottom" data-label="Want 2 IT" style="font-size: 22px;">Хочу в IT</small></a>
-             <span><a class="moon mx-1 ms-0 text-start" aria-current="page" data-label="light" style="margin-top:-3px;"><i id="theme-swith-1" class="bi bi-moon-stars-fill text-primary fa-lg"></i></a>
+             <span><a class="moon mx-1 ms-0 text-start position-relative" aria-current="page" data-label="light" style="margin-top:-3px;font-size: 18px;"><i class="bi bi-cloud-moon-fill fa-lg text-primary"></i><span class="position-absolute top-50 start-0 translate-middle"><i class="bi bi-sun-fill fa-lg" style="color: #f34f20"></i></span></a>
         <a class="mx-1 text-start changelang" aria-current="page" id="langs" data-label="ru"><i class="bi bi-translate text-white fa-lg"></i>&nbsp;<span class="text-dark badge bg-white lang-11" data-label="EN" style="margin-left: 0px; opacity: 0.6">RU</span></a>
     <button type="button" class="btn-close btn-close-white p-3 pt-2" data-bs-dismiss="modal" id="navbar1" aria-label="Close" style="margin-left: -10px; margin-right: -10px"></button></span>
             </div>
@@ -1877,173 +1878,52 @@ a.preicons
  
  <main class="ms-3 pe-4 pt-4">
     <div class="row mx-auto">
-      <div class="col-md-9 col-lg-7 mx-auto pt-2 pb-2 g-4" id="item2">
-                  <div class="pb-3 text-center pt-2 bg-darks rounded-5 my-auto pb-3 container" style="min-height: 560px;">
-      <img class="d-block img-fluid mx-auto mt-4 mb-4" src="v-promo.png" alt="" style="max-width: 190px;">
-      <hr><h1 class="text-info pb-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Всего вакансий открыто: 13">Наши вакансии</h1>
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="1">C/C++
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">1 <span class="visually-hidden">непрочитанные сообщения</span></span>
+	  	 <div class="col-md-7 col-lg-8 col-sm-12 mx-auto pb-2 mb-1 " id="item4">
+                  <div class="pb-3 text-center pt-2 bg-darks rounded-5 my-auto border-1 border border-secondary pb-3 container" style="min-height: 516px;">
+      <img class="d-block img-fluid mx-auto mt-4 mb-4" src="assets/img/v-promo.png" alt="" style="max-width: 272px;">
+      <hr><h1 class="text-info pb-3 lang-30" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" title="Всего вакансий открыто: 22" data-label="Open vacancies">Наши вакансии</h1>
+			<div class="container" style="max-width: 640px">
+        <span class="badge position-relative mb-1 mt-0 mx-1 bg-primary" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" title="4">DevOps engineer
+			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">4 <span class="visually-hidden">4</span></span>
 		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-warning text-dark" data-bs-toggle="tooltip" data-bs-placement="top" title="2">javascript
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">2 <span class="visually-hidden">непрочитанные сообщения</span></span>
+        <span class="badge position-relative mb-1 mt-0 mx-1 bg-warning text-dark" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" title="2">DB administrator
+			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">2 <span class="visually-hidden">2</span></span>
 		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-light text-dark" data-bs-toggle="tooltip" data-bs-placement="top" title="3">java
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light text-dark">3 <span class="visually-hidden">непрочитанные сообщения</span></span>
+        <span class="badge position-relative mb-1 mt-0 mx-1 bg-light text-dark" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" title="5">Java developer
+			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light text-dark">5 <span class="visually-hidden">5</span></span>
 		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-info text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">QA
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-muted">· <span class="visually-hidden">непрочитанные сообщения</span></span>
+        <span class="badge position-relative mb-1 mt-0 mx-1 bg-info text-muted" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" title="3">QA engineer
+			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-muted">3 <span class="visually-hidden">3</span></span>
 		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-success" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">python
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">· <span class="visually-hidden">непрочитанные сообщения</span></span>
+        <span class="badge position-relative mb-1 mt-0 mx-1" style="background-color:#6f42c1" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" title="1">Enterprise architect
+			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-white" style="background-color:#6f42c1">1<span class="visually-hidden">1</span></span>
 		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1" style="background-color: #0d6efd" data-bs-toggle="tooltip" data-bs-placement="top" title="1">.NET
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill" style="background-color: #0d6efd">1 <span class="visually-hidden">непрочитанные сообщения</span></span>
+        <span class="badge position-relative mb-1 mt-0 mx-1 bg-success" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" title="3">Python developer
+			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">3 <span class="visually-hidden">3</span></span>
 		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 text-dark" style="background-color: #3cd481" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">android
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-dark" style="background-color: #3cd481">· <span class="visually-hidden">непрочитанные сообщения</span></span>
+        <span class="badge position-relative mb-1 mt-0 mx-1 text-dark" style="background-color: #fd7e14" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" title="1">Ruby developer
+			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-dark" style="background-color: #fd7e14">1 <span class="visually-hidden">1</span></span>
 		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1" style="background-color: #0d6efd;" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">devops
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill" style="background-color: #0d6efd">· <span class="visually-hidden">непрочитанные сообщения</span></span>
+        <span class="badge position-relative mb-1 mt-0 mx-1 text-white" style="background-color:#03437a" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" title="1">Business analyst
+			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-white" style="background-color:#03437a">1 <span class="visually-hidden">1</span></span>
 		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1" style="background-color: #6f42c1;" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">php
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill" style="background-color: #6f42c1">· <span class="visually-hidden">непрочитанные сообщения</span></span>
+        <span class="badge position-relative mb-1 mt-0 mx-1 bg-danger" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" title="1">System administrator
+			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">1 <span class="visually-hidden">1</span></span>
 		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-success" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">nodejs
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="1">angular
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">1 <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-info text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">go/golang
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-muted">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1" style="background-color: #fd7e14" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">ruby
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill" style="background-color: #fd7e14">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-light text-dark" data-bs-toggle="tooltip" data-bs-placement="top" title="1">typescript
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light text-dark">1 <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-warning text-dark" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">UI/UX
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="2">solution architect
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">2 <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">R
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-light text-dark" data-bs-toggle="tooltip" data-bs-placement="top" title="1">project manager
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light text-dark">1 <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-warning text-dark" data-bs-toggle="tooltip" data-bs-placement="top" title="1">business analyst
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">1 <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-info text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">swift
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-muted">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-success" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">data analyst
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-dark text-white" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">unity
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark text-white">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-info text-dark" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">perl
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-dark">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">machine learning engineer
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">system administrator
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1" style="background-color: #fd7e14" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">laravel
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill" style="background-color: #fd7e14">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-success" data-bs-toggle="tooltip" data-bs-placement="top" title="1">kotlin
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">1 <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-light text-dark" data-bs-toggle="tooltip" data-bs-placement="top" title="2">sql
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light text-dark">2 <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-danger text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="3">software architect
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger text-muted">3 <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-warning text-dark" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">rust
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-success" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">solidity
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-info" data-bs-toggle="tooltip" data-bs-placement="top" title="1">iOS
-			<span class="position-absolute top-0 start-100 translate-middle badge bg-info rounded-pill">1 <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 text-dark" style="background-color: #3cd481" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">data science
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-dark" style="background-color: #3cd481">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1" style="background-color: #0d6efd;" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">delivery manager
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill" style="background-color: #0d6efd">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1" style="background-color: #6f42c1;" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">secops
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill" style="background-color: #6f42c1">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-dark text-white" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">dart
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark text-white">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="1">matlab
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">1 <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-info text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">haskell
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-muted">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1" style="background-color: #fd7e14" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">frontend
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill" style="background-color: #fd7e14">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-light text-dark" data-bs-toggle="tooltip" data-bs-placement="top" title="1">fullstack
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light text-dark">1 <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-warning text-dark" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">system analyst
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="2">database architect
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">2 <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">backend
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-light text-dark" data-bs-toggle="tooltip" data-bs-placement="top" title="1">project owner
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light text-dark">1 <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-warning text-dark" data-bs-toggle="tooltip" data-bs-placement="top" title="1">shell
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">1 <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-info text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">react
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-muted">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-success" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">vue.js
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-dark text-white" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">game design
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark text-white">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp; 
-		<span class="badge position-relative mb-1 mt-0 mx-1" style="background-color: #fd7e14" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">next.js
-		    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill" style="background-color: #fd7e14">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		        </span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">big data engineer
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">· <span class="visually-hidden">непрочитанные сообщения</span></span>
-		</span>&nbsp;
-        <span class="badge position-relative mb-1 mt-0 mx-1 bg-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">system architect
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">· <span class="visually-hidden">непрочитанные сообщения</span></span>
+        <span class="badge position-relative mb-1 mt-0 mx-1 text-dark" style="background-color: rgba(205, 163, 107, 0.96)" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" title="1">Rust developer
+			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-dark" style="background-color: rgba(205, 163, 107, 0.96)">1 <span class="visually-hidden">1</span></span>
 		</span>&nbsp;
       </div>
+			</div>
 		  </div>
-      <div class="col-md-12 mx-auto pb-2 mb-1 g-2">
+	      <div class="col-md-12 col-lg-11 col-sm-12 mx-auto pb-2 mb-1 g-2">
     <div class="collapse multi-collapse show" id="multiCollapseExample1">
 <hr>
 		  <div class="wrapper mx-auto">
     <div class="">
-        <div class="row mx-auto">
-            <div class="col-md-8 col-md-offset-2 mx-auto">
-                                
+        <div class="row mx-auto my-auto d-flex">
+            <div class="col-md-10 col-sm-12 col-lg-10 mx-auto position-relative">
+                <button class="position-absolute top-0 start-0 translate-middle btn btn-secondary" style="margin-left: 16px; border-radius: 50%"><i class="bi bi-archive-fill fa-lg"></i></button>
                 <div class="fresh-table full-color-blue" id="table-color">
                 <!--    Available colors for the full background: full-color-blue, full-color-azure, full-color-green, full-color-red, full-color-orange                  
                         Available colors only for the toolbar: toolbar-color-blue, toolbar-color-azure, toolbar-color-green, toolbar-color-red, toolbar-color-orange
@@ -2059,6 +1939,105 @@ a.preicons
                    	<th data-field="cii">Дата&nbsp;&nbsp;&nbsp;&nbsp;</th>
                         </thead>
                         <tbody>
+                            <tr>
+                            	<td><a class="nav-link" onclick="vacancy123()">Java developer</a></td>
+                            	<td>$2000-6000</td>
+                            	<td>middle</td>
+                            	<td>4</td>
+                            	<td>
+                     <span class="badge bg-success text-white">spring</span>  &nbsp;<span class="badge bg-warning text-dark">postgresql</span> &nbsp;<span class="badge bg-danger text-white">kafka</span>      	  
+                            	 
+                            	</td>
+                            <td>6 дней назад</td>
+                            </tr>
+                            <tr>
+                            	<td><a class="nav-link" onclick="vacancy123()">Java developer</a></td>
+                            	<td>$2000-6000</td>
+                            	<td>middle</td>
+                            	<td>4</td>
+                            	<td>
+                     <span class="badge bg-success text-white">spring</span>  &nbsp;<span class="badge bg-warning text-dark">postgresql</span> &nbsp;<span class="badge bg-danger text-white">kafka</span>      	  
+                            	 
+                            	</td>
+                            <td>6 дней назад</td>
+                            </tr>
+                            <tr>
+                            	<td><a class="nav-link" onclick="vacancy123()">Java developer</a></td>
+                            	<td>$2000-6000</td>
+                            	<td>middle</td>
+                            	<td>4</td>
+                            	<td>
+                     <span class="badge bg-success text-white">spring</span>  &nbsp;<span class="badge bg-warning text-dark">postgresql</span> &nbsp;<span class="badge bg-danger text-white">kafka</span>      	  
+                            	 
+                            	</td>
+                            <td>6 дней назад</td>
+                            </tr>
+                            <tr>
+                            	<td><a class="nav-link" onclick="vacancy123()">Java developer</a></td>
+                            	<td>$2000-6000</td>
+                            	<td>middle</td>
+                            	<td>4</td>
+                            	<td>
+                     <span class="badge bg-success text-white">spring</span>  &nbsp;<span class="badge bg-warning text-dark">postgresql</span> &nbsp;<span class="badge bg-danger text-white">kafka</span>      	  
+                            	 
+                            	</td>
+                            <td>6 дней назад</td>
+                            </tr>
+                            <tr>
+                            	<td><a class="nav-link" onclick="vacancy123()">Java developer</a></td>
+                            	<td>$2000-6000</td>
+                            	<td>middle</td>
+                            	<td>4</td>
+                            	<td>
+                     <span class="badge bg-success text-white">spring</span>  &nbsp;<span class="badge bg-warning text-dark">postgresql</span> &nbsp;<span class="badge bg-danger text-white">kafka</span>      	  
+                            	 
+                            	</td>
+                            <td>6 дней назад</td>
+                            </tr>
+                            <tr>
+                            	<td><a class="nav-link" onclick="vacancy123()">Java developer</a></td>
+                            	<td>$2000-6000</td>
+                            	<td>middle</td>
+                            	<td>4</td>
+                            	<td>
+                     <span class="badge bg-success text-white">spring</span>  &nbsp;<span class="badge bg-warning text-dark">postgresql</span> &nbsp;<span class="badge bg-danger text-white">kafka</span>      	  
+                            	 
+                            	</td>
+                            <td>6 дней назад</td>
+                            </tr>
+                            <tr>
+                            	<td><a class="nav-link" onclick="vacancy123()">Java developer</a></td>
+                            	<td>$2000-6000</td>
+                            	<td>middle</td>
+                            	<td>4</td>
+                            	<td>
+                     <span class="badge bg-success text-white">spring</span>  &nbsp;<span class="badge bg-warning text-dark">postgresql</span> &nbsp;<span class="badge bg-danger text-white">kafka</span>      	  
+                            	 
+                            	</td>
+                            <td>6 дней назад</td>
+                            </tr>
+                            <tr>
+                            	<td><a class="nav-link" onclick="vacancy123()">Java developer</a></td>
+                            	<td>$2000-6000</td>
+                            	<td>middle</td>
+                            	<td>4</td>
+                            	<td>
+                     <span class="badge bg-success text-white">spring</span>  &nbsp;<span class="badge bg-warning text-dark">postgresql</span> &nbsp;<span class="badge bg-danger text-white">kafka</span>      	  
+                            	 
+                            	</td>
+                            <td>6 дней назад</td>
+                            </tr>
+                            <tr>
+                            	<td><a class="nav-link" onclick="vacancy123()">Java developer</a></td>
+                            	<td>$2000-6000</td>
+                            	<td>middle</td>
+                            	<td>4</td>
+                            	<td>
+                     <span class="badge bg-success text-white">spring</span>  &nbsp;<span class="badge bg-warning text-dark">postgresql</span> &nbsp;<span class="badge bg-danger text-white">kafka</span>      	  
+                            	 
+                            	</td>
+                            <td>6 дней назад</td>
+                            </tr>
                             <tr>
                             	<td><a class="nav-link" onclick="vacancy123()">Java developer</a></td>
                             	<td>$2000-6000</td>
