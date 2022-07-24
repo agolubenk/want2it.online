@@ -1836,7 +1836,7 @@ a.preicons
         <li class="nav-item d-none d-lg-block">
           <a class="nav-link text-white lang-7" id="nav-5" onclick="vacancy()" data-label="Vacancies">Вакансии</a>
         </li>
-        <li class="nav-item d-none d-lg-block">
+        <li class="nav-item d-none">
           <a class="nav-link text-white lang-8" id="nav-5" onclick="joinus()" data-label="Join us">Работа у нас</a>
         </li>
         <li class="nav-item d-none d-lg-block">
@@ -1861,7 +1861,7 @@ a.preicons
                     <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white link-light lang-13" data-label="Prices" onclick="prices()"> Цены</a></li>
                     <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white link-light lang-14" data-label="About" onclick="about()"> О нас</a></li>
                     <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white link-light lang-15" data-label="Vacancies" onclick="vacancy()"> Вакансии</a></li>
-                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white link-light lang-16" data-label="Join us" onclick="joinus()"> Работа у нас</a></li>
+                    <li class="nav-item d-none"><a class="nav-link btn btn-outline-warning text-white link-light lang-16" data-label="Join us" onclick="joinus()"> Работа у нас</a></li>
                     <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white link-light lang-55" data-label="Blog" onclick="blog()"> Блог компании</a></li>
                 </ul>
                 </div>
@@ -1872,48 +1872,63 @@ a.preicons
     </div>
   </div>
   </header>
-
-  <main class="ms-3 pe-4 pt-5">
-    <div class="container g-4 pb-5 mx-auto">
+ <header class="bg-darkss text-white d-flex text-center" id="search-menu" style="height: calc(100vh - 53px); min-height: 510px;">
+    <div class="container pt-2 position-relative">
+    <div class="container g-4 pb-2 mx-auto boeder border-1 border-secondary">
                   <div class="py-2 text-center pt-2 bg-darks rounded-5 px-2 my-auto pb-3 container">
-      <img class="d-block img-fluid mx-auto mt-5 mb-4" src="a-brand.png" alt="">
+      <img class="d-block img-fluid mx-auto mt-5 mb-4 large-logo" src="assets/img/illustration-2.png" alt="">
       <h1 class="text-info pb-2">О нас</h1>
-        <p class="lead text-white pb-3">Кадровое агентство "Хочу в IT" осуществляет подбор IT персонала любого уровня сложности. Мы работаем с применением различных техник в части поиска и подбора персонала, используем как классические инструменты, так и современные методики для оценки и поиска сотрудников. Ваша команда в наших руках! А мы собираем только профессионалов!</p>
+        <p class="lead text-white pb-3">Кадровое агентство "Хочу в IT" осуществляет подбор IT персонала любого уровня сложности. Мы работаем с применением различных техник в части поиска и подбора персонала, используем как классические инструменты, так и современные методики для оценки и поиска сотрудников. Мы собираем только профессионалов!</p>
     </div>
       </div>
- 
+    <div class="position-absolute bottom-0 start-50" style="margin-left: -16px;">
+      <a href="#item1" class="py-3 h4 bi bi-arrow-down puls text-info"></a>
+    </div>
 
-    <div class="container pb-5">
+    </div>
+
+  </header>
+  <main class="ms-3 pe-4 pt-5 mx-5" style="margin-top: -16px;" id="item1">
+
+    <div class="container-fluid mx-3 pb-5 border border-1 border-secondary">
         <div class="px-3 py-3 row  mx-auto pt-4 bg-darks rounded-5 row-cols-1 row-cols-lg-4 row-cols-md-2">
       <div class="feature col" data-bs-toggle="tooltip" data-bs-placement="top" title="Мы определяем, кто Вам нужен, после чего приступаем к поискам">
-        <div class="feature-icon bg-info text-dark bg-gradient">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#checkkk"/></svg>
-        </div>
-        <h2 class="text-info">Качество</h2>
-        <p class="text-white">Мы знаем где искать опытных и квалифицированных сотрудников, которые в состоянии решить Ваши задачи.</p>
+        <div class="card rounded rounded-5" style="width: 18rem; background-color: transparent!important;">
+  <img src="assets/img/about-1.png" class="card-img-top" alt="...">
+  <div class="card-body rounded rounded-5" style="background-color: transparent!important;">
+      <h3 class="text-info"><i class="bi bi-trophy-fill text-info fa-lg"></i> Качество</h3>
+      <p class="card-text text-white">Мы знаем где искать опытных и квалифицированных сотрудников, которые в состоянии решить Ваши задачи.</p>
+  </div>
+</div>
       </div>
       <div class="feature col" data-bs-toggle="tooltip" data-bs-placement="top" title="В течение 1-2 месяцев мы закрываем пул Ваших вакансий">
-        <div class="feature-icon bg-info text-dark bg-gradient">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#spedomi"/></svg>
-        </div>
-        <h2 class="text-info">Скорость</h2>
-        <p class="text-white">Помимо качественного подбора мы еще и максимально быстрые! Быстро не значит плохо. Уже через неделю у Вас будут первые кандидаты.</p>
+        <div class="card rounded rounded-5" style="width: 18rem; background-color: transparent!important;">
+  <img src="assets/img/about-2.png" class="card-img-top" alt="...">
+  <div class="card-body rounded rounded-5" style="background-color: transparent!important;">
+      <h3 class="text-info"><i class="bi bi bi-speedometer text-info fa-lg"></i> Скорость</h3>
+      <p class="card-text text-white">Помимо качественного подбора мы еще и максимально быстрые! Быстро не значит плохо. Уже через неделю у Вас будут первые кандидаты.</p>
+  </div>
+</div>
       </div>
       <div class="feature col" data-bs-toggle="tooltip" data-bs-placement="top" title="У нас достаточно опыта, чтобы поразить Вас профессионализмом">
-        <div class="feature-icon bg-info text-dark bg-gradient">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#mortarbo"/></svg>
-        </div>
-        <h2 class="text-info">Опыт</h2>
-        <p class="text-white">В нашем портфолио собраны кейсы из разных доменов. Мы вели и ведем поиск сотрудников абсолютно разного уровня сложности, ориентируясь на наши компетенции и профессионализм.</p>
+        <div class="card rounded rounded-5" style="width: 18rem; background-color: transparent!important;">
+  <img src="assets/img/about-3.png" class="card-img-top" alt="...">
+  <div class="card-body rounded rounded-5" style="background-color: transparent!important;">
+      <h3 class="text-info"><i class="bi bi-briefcase text-info fa-lg"></i> Опыт</h3>
+      <p class="card-text text-white">В нашем портфолио собраны кейсы из разных доменов. Мы вели и ведем поиск сотрудников абсолютно разного уровня сложности, ориентируясь на наши компетенции и профессионализм.</p>
+  </div>
+</div>
       </div>
       <div class="feature col" data-bs-toggle="tooltip" data-bs-placement="top" title="В наших принципах индивидуальный и объективный подход к каждому кандидату и клиенту">
-        <div class="feature-icon bg-info text-dark bg-gradient">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#signpost"/></svg>
-        </div>
-        <h2 class="text-info">Гибкий подход</h2>
-        <p class="text-white">Мы учитываем как профессиональные навыки, так и личностные качества сотрудника и работодателя, а также специфику корпоративной культуры, в которую идет кандидат.</p>
-       
+        <div class="card rounded rounded-5" style="width: 18rem; background-color: transparent!important;">
+  <img src="assets/img/s-1-promo.png" class="card-img-top" alt="...">
+  <div class="card-body rounded rounded-5" style="background-color: transparent!important;">
+      <h3 class="text-info"><i class="bi bi-bug-fill text-info fa-lg"></i> Гибкий подход</h3>
+      <p class="card-text text-white">Мы учитываем как профессиональные навыки, так и личностные качества сотрудника и работодателя, а также специфику корпоративной культуры, в которую идет кандидат.</p>
+  </div>
+</div>
       </div>
+
     </div>
     </div> 
 
@@ -1995,7 +2010,7 @@ a.preicons
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a onclick="about()" class="nav-link p-0 text-white lang-39" data-label="About company">О компании</a></li>
           <li class="nav-item mb-2"><a onclick="blog()" class="nav-link p-0 text-white lang-40" data-label="Blog">Блог компании</a></li>
-          <li class="nav-item mb-2"><a onclick="joinus()" class="nav-link p-0 text-white lang-41" data-label="Join us">Работа у нас</a></li>
+          <li class="nav-item mb-2 d-none"><a onclick="joinus()" class="nav-link p-0 text-white lang-41" data-label="Join us">Работа у нас</a></li>
         </ul>
       </div>
 

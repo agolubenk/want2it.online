@@ -1838,7 +1838,7 @@ a.preicons
         <li class="nav-item d-none d-lg-block">
           <a class="nav-link text-white lang-7" id="nav-5" onclick="vacancy()" data-label="Vacancies">Вакансии</a>
         </li>
-        <li class="nav-item d-none d-lg-block">
+        <li class="nav-item d-none">
           <a class="nav-link text-white lang-8" id="nav-5" onclick="joinus()" data-label="Join us">Работа у нас</a>
         </li>
         <li class="nav-item d-none d-lg-block">
@@ -1863,7 +1863,7 @@ a.preicons
                     <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white link-light lang-13" data-label="Prices" onclick="prices()"> Цены</a></li>
                     <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white link-light lang-14" data-label="About" onclick="about()"> О нас</a></li>
                     <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white link-light lang-15" data-label="Vacancies" onclick="vacancy()"> Вакансии</a></li>
-                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white link-light lang-16" data-label="Join us" onclick="joinus()"> Работа у нас</a></li>
+                    <li class="nav-item d-none"><a class="nav-link btn btn-outline-warning text-white link-light lang-16" data-label="Join us" onclick="joinus()"> Работа у нас</a></li>
                     <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white link-light lang-55" data-label="Blog" onclick="blog()"> Блог компании</a></li>
                 </ul>
                 </div>
@@ -2275,7 +2275,7 @@ a.preicons
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a onclick="about()" class="nav-link p-0 text-white lang-39" data-label="About company">О компании</a></li>
           <li class="nav-item mb-2"><a onclick="blog()" class="nav-link p-0 text-white lang-40" data-label="Blog">Блог компании</a></li>
-          <li class="nav-item mb-2"><a onclick="joinus()" class="nav-link p-0 text-white lang-41" data-label="Join us">Работа у нас</a></li>
+          <li class="nav-item mb-2 d-none"><a onclick="joinus()" class="nav-link p-0 text-white lang-41" data-label="Join us">Работа у нас</a></li>
         </ul>
       </div>
 
@@ -2663,7 +2663,7 @@ var params = window.location.search.replace('?','').split('&').reduce(
           function vacancy123(){
               let bc = $(document.documentElement).attr('data-theme');
               let bd = $(document.documentElement).attr('data-label');
-              window.location.href='vacancy-2204171.html?theme='+bc+'&lang='+bd;
+              window.location.href='vacancy/devops-abb/index.html';
           };
       </script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script>
