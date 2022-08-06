@@ -13,6 +13,7 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="../dist/js/telegramform.js"></script>
+    <script src="form-validation.js"></script>
     <!-- Bootstrap core CSS -->
 <!-- Только CSS -->
 
@@ -1881,14 +1882,28 @@ a.preicons
       <div class="modal-body bg-darkss rounded-5 p-5 pt-0">
         <form class="">
           <div class="form-floating mb-3">
-            <input type="text" class="form-control bg-darks text-info rounded-4" id="floatingInput" placeholder="Login">
+            <input type="text" class="form-control bg-darks text-info rounded-4" name="namelogin" id="login" placeholder="Login">
             <label for="floatingInput">Login</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="password" class="form-control bg-darks text-info rounded-4" id="floatingPassword" placeholder="Password">
+            <input type="password" class="form-control bg-darks text-info rounded-4" name="namepassword" id="password" placeholder="Password">
             <label for="floatingPassword">Password</label>
           </div>
-          <button class="w-100 mb-2 btn btn-lg rounded-4 btn-info" type="submit">Авторизоваться</button>
+            <div class="d-flex justify-content-between">
+          <button class="mb-2 btn btn-lg rounded-4 btn-info" id="start" onclick="getClient()">Авторизоваться</button>
+          <a href="#item1" class="mb-2 btn btn-lg rounded-4 btn-info d-none" id="go">Перейти</a>
+                <span>
+    <div class="" id="error" style=" margin-bottom: 16px;">
+      <a class="puls text-danger nav-link" style="width: 48px; height: 48px; font-size: 26px;" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" title="Вы не авторизованы!"><i class=" bi bi-exclamation-triangle"></i></a>
+    </div>
+    <div class="d-none" id="looking" style=" margin-bottom: 16px;">
+      <a class="puls text-secondary" style="width: 48px; height: 48px; font-size: 26px;" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" title="Проверяем данные!"><i class="fa fa-circle-o-notch fa-spin"></i></a>
+    </div>
+    <div class="d-none" id="compleat" style=" margin-bottom: 16px;">
+      <a class="puls text-success" style="width: 48px; height: 48px;" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" title="Загружаем данные..."><i class=" bi bi-check-lg fa-2x"></i></a>
+    </div>
+       </span>
+</div>
         </form>
       </div>
     </div>
@@ -1896,22 +1911,12 @@ a.preicons
 </div>
     </div>
       </div>
-    <div class="position-absolute bottom-0 start-100 d-none" id="error" style=" margin-bottom: 16px;">
-      <a href="#item1" class="puls text-danger nav-link" style="width: 48px; height: 48px; font-size: 26px;" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" title="Вы не авторизованы!"><i class=" bi bi-exclamation-triangle"></i></a>
-    </div>
-    <div class="position-absolute bottom-0 start-100 d-none" id="looking" style=" margin-bottom: 16px;">
-      <a href="#item1" class="puls text-secondary" style="width: 48px; height: 48px; font-size: 26px;" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" title="Проверяем данные!"><i class="fa fa-circle-o-notch fa-spin"></i></a>
-    </div>
-    <div class="position-absolute bottom-0 start-100" id="compleat" style=" margin-bottom: 16px;">
-      <a href="#item1" class="puls text-success" style="width: 48px; height: 48px;" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" title="Загружаем данные..."><i class=" bi bi-check-lg fa-2x"></i></a>
-    </div>
 
     </div>
 
   </header>
-  <main class="d-none" style="padding-top: 53px" id="item1">
-<iframe class="clickup-embed" src="https://sharing.clickup.com/24479003/gr/h/4-61368445-23/81988b54dbe119b" onwheel="" width="100%" height="700px" style="background: transparent; border: 1px solid #ccc;"></iframe>
-      
+  <main class="" style="padding-top: 53px" id="item1">
+<iframe class="clickup-embed" src="https://sharing.clickup.com/24479003/gr/h/4-61368445-23/81988b54dbe119b" onwheel="" width="100%" height="700px" style="background: transparent; border: 1px solid #ccc;"></iframe>      
    </main>
  
  <hr>
@@ -2069,6 +2074,8 @@ a.preicons
 
 <script src="../form-validation.js"></script>
 <script>
+      </script>
+<script>
       const checkLength = function(evt) {
   if (phoneField.value.length >= 5) {
   	button.removeAttribute('disabled')
@@ -2194,6 +2201,25 @@ for (const button of buttons) {
 			  Visible (element01); 
 		  }); // А также запустим функцию сразу. А то вдруг, элемент изначально видно Visible (element);
 	  </script>
+     <script>
+          $(window).on('load',function(){
+                var param = window.location.search.replace('?','').split('&').reduce(
+        function(pp,ee){
+            var aa = ee.split('=');
+            pp[ decodeURIComponent(aa[0])] = decodeURIComponent(aa[1]);
+            return pp;
+        },
+        {}
+    );
+                let ad = param['namelogin'];
+                let ae = param['namepassword'];
+                var myFrame = $('#wind');
+                var ast = ''+ae;
+                myFrame.attr('src', myFrame.attr('src').replace(/blank/, ''));
+    });
+         
+        
+      </script>
      <script>
 window.onload=function(){
 var params = window.location.search.replace('?','').split('&').reduce(
