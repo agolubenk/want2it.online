@@ -2684,6 +2684,18 @@ clipboard.on('error', function(e) {
 		  }); // А также запустим функцию сразу. А то вдруг, элемент изначально видно Visible (element);
 	  </script>
      <script>
+            $(window).on('load',function(){
+                var param = window.location.search.replace('?','').split('&').reduce(
+        function(pp,ee){
+            var aa = ee.split('=');
+            pp[ decodeURIComponent(aa[0])] = decodeURIComponent(aa[1]);
+            return pp;
+        },
+        {}
+    );
+                let ad = param['postid'];
+        $('#blog-modal'+ad).modal('show');
+    });
 window.onload=function(){
 var params = window.location.search.replace('?','').split('&').reduce(
         function(p,e){
