@@ -61,7 +61,7 @@
           display: none;
       }
         body{
-            background-image: radial-gradient(circle at 32.48% 19.66%, #75a2aa 0, #568f9c 25%, #2b798b 50%, #00647b 75%, #00526f 100%); 
+            background-image: radial-gradient(ellipse closest-side at center, #eee, #fff); 
             background-attachment: fixed;
         }
 .list-counter-circle {
@@ -132,20 +132,20 @@ border-radius: 1.25rem;
 	<link rel="icon" href="/assets/img/big-logo.png">
   </head>
   <body>
-<header class="fixed-top bg-dark">
-  <div class="collapse border-bottom bg-darks" id="navbarHeader">
+<header class="fixed-top bg-secondary">
+  <div class="collapse border-bottom bg-secondary" id="navbarHeader">
     <div class="container bg-darks">
       <div class="row d-flex flex-row-reverse">
         <div class="col-sm-9 col-md-4 py-2 d-none">
         </div>
-        <div class="col-sm-3 col-md-2 py-2">
-          <a href="javascript:history.go(-1)" class="text-white" style="text-decoration: none"><i class="bi bi-reply-fill fa-lg"></i> назад</a>
+        <div class="col-sm-3 col-md-2 py-2 card card-cover" style="background-color: transparent!important; border:0px">
+          <a href="javascript:history.go(-1)" class="text-white stretched-link" style="text-decoration: none"><i class="bi bi-reply-fill fa-lg"></i> назад</a>
         </div>
-        <div class="col-sm-3 col-md-2 py-2">
-          <a href="https://want2it.online/vacancy.html" class="text-white" style="text-decoration: none"><i class="bi bi-card-checklist fa-lg"></i> вакансии</a>
+        <div class="col-sm-3 col-md-2 py-2 card card-cover" style="background-color: transparent!important; border:0px">
+          <a href="https://want2it.online/vacancy.html" class="text-white stretched-link" style="text-decoration: none"><i class="bi bi-card-checklist fa-lg"></i> вакансии</a>
         </div>
-        <div class="col-sm-3 col-md-2 py-2">
-          <a href="print.html" class="text-white" style="text-decoration: none"><i class="bi bi-printer-fill fa-lg"></i> печать</a>
+        <div class="col-sm-3 col-md-2 py-2 card card-cover" style="background-color: transparent!important; border:0px">
+          <a href="print.html" class="text-white stretched-link" style="text-decoration: none"><i class="bi bi-printer-fill fa-lg"></i> печать</a>
         </div>
       </div>
     </div>
@@ -154,21 +154,21 @@ border-radius: 1.25rem;
 <div class="cover-container d-flex p-3 mx-auto flex-column">
 
 <button class="btn btn-outline-white border-white text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation" style="position: fixed; top: 16px; right: 18px; border-radius: 50%; height: 46px; width: 46px; z-index: 100000">
-        <span class="bi bi-list fa-lg text-white"></span>
+        <span class="bi bi-list fa-lg text-dark"></span>
       </button>
   <header class="mb-auto pt-2 pb-3">
     <div>
-        <a class="nav-link h1 text-center disabled" disable style="text-decoration: none; margin-bottom: -20px;"><i class="text-white" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Мы ищем профессионала, готового развиваться">Senior</i> <b class="text-white">Java developer</b> <i style="color:#fff">в</i> <b style="color:#ff2400">Альфа-Банк Беларусь</b></a><hr>
-          <i class="text-white h4 nav-link text-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Это не предел. Двигаемся отталкиваясь от опыта"><i class="bi bi-currency-exchange fa-lg"></i> от 2 700 до 5 000 <b class="badge bg-dark">USD</b> на руки</i>
+        <a class="nav-link h1 text-center disabled" disable style="text-decoration: none; margin-bottom: -20px;"><i class="text-dark" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Мы ищем профессионала, готового развиваться">Senior</i> <b class="text-dark">Java developer</b> <i style="color:#fff">в</i> <b style="color:#ff2400">Альфа-Банк Беларусь</b></a><hr>
+          <i class="text-dark h4 nav-link text-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Это не предел. Двигаемся отталкиваясь от опыта"><i class="bi bi-currency-exchange fa-lg"></i> от 2 700 до 5 000 <b class="badge bg-dark">USD</b> на руки</i>
     </div>
   </header>
   <main class="px-1">
     <h5 class="px-2 p-1 pb-0 mx-auto d-md-block d-none"><b class="">Приглашаем Java разработчиков с опытом работы 3+ лет</b> <i class="h6">к нам в Альфа-Банк Беларусь! Мы второй по популярности и объемам финансов в стране банк. На текущий момент мы желаем и можем развиваться, но нам нужны специалисты! Мы строим свой IT отдел с нуля, и, возможно, именно ты можешь внести свой вклад!</i></h5>
-      <div class="alert alert-info px-2 p-1 pb-0 mx-auto d-md-none d-block text-center"><b class="h5 py-3 px-3 mx-auto">Приглашаем Java разработчиков с опытом работы 3+ лет к нам в Альфа-Банк Беларусь!</b></div>
+      <div class="alert alert-danger px-2 p-1 pb-0 mx-auto d-md-none d-block text-center"><b class="h5 py-3 px-3 mx-auto">Приглашаем Java разработчиков с опытом работы 3+ лет к нам в Альфа-Банк Беларусь!</b></div>
       <div class="row">
           <div class="col-md-6 col-lg-6 col-sm-12">
       <span class="p-1">
-          <h5 class="text-white"><i class="bi bi-pin-angle-fill"></i> Ключевые задачи:</h5>
+          <h5 class="text-dark"><i class="bi bi-pin-angle-fill"></i> Ключевые задачи:</h5>
           <ol class="list-counter-circle">
               <li class="nav-scroller"><small><i class="bi bi-lightning-charge-fill"></i> разработка логики бизнес-процессов в рамках облачной системы;</small></li>
               <li><small><i class="bi bi-lightning-charge-fill"></i> разработка модульных и интеграционных автотестов;</small></li>
@@ -177,7 +177,7 @@ border-radius: 1.25rem;
           </ol>
       </span>
       <span class="p-1">
-          <h5 class="text-white"><i class="bi bi-patch-exclamation-fill"></i> Требования к кандидатам:</h5>
+          <h5 class="text-dark"><i class="bi bi-patch-exclamation-fill"></i> Требования к кандидатам:</h5>
           <ol class="list-counter-circle">
               <li><small><i class="bi bi-mortarboard-fill"></i> опыт разработки приложений на Java от 3 лет;</small></li>
               <li><small><i class="bi bi-mortarboard-fill"></i> опыт разработки Enterprise-решений с использованием Spring framework;</small></li>
@@ -186,7 +186,7 @@ border-radius: 1.25rem;
           </ol>
       </span>
       <span class="p-1">
-          <h5 class="text-white"><i class="bi bi-mortarboard-fill"></i> Желательно:</h5>
+          <h5 class="text-dark"><i class="bi bi-mortarboard-fill"></i> Желательно:</h5>
           <ol class="list-counter-circle">
               <li><small><i class="bi bi-bug-fill"></i> опыт работы с AWS, MS Azure, GCP;</small></li>
               <li><small><i class="bi bi-bug-fill"></i> опыт разработки через тестирование (TDD);</small></li>
@@ -196,12 +196,12 @@ border-radius: 1.25rem;
               </div>
           <div class="col-md-6 col-lg-6 col-sm-12"><hr>
               <div class="d-sm-block d-none"><br></div>
-    <i class="text-white h5 pt-5"><i class="bi bi-pc-display"></i> В перспективе будем развиваться в направлениях AI и ML.</i>
-              <h5 class="pt-4 p-1 text-white"><b class=""><i class="bi bi-stack-overflow"></i> Стек:</b> Java, Swift, React. <b class="text-white">БД:</b> PostgreSQL, MongoDB, Redis.</h5>
-              <h5 class="pt-0 p-1 text-white"><b class="text-white"><i class="bi bi-git"></i> Дополнительно:</b> Sonatype Nexus, SonarQube, ELK-стек, WSO2 API Manager.</h5>
-              <h5 class="pt-0 p-1 text-white"><b class="text-white"><i class="bi bi-diagram-2-fill"></i> Системы совместной работы:</b> Jira, Confluence, Bitbucket, Bamboo.</h5>
+    <i class="text-dark h5 pt-5"><i class="bi bi-pc-display"></i> В перспективе будем развиваться в направлениях AI и ML.</i>
+              <h5 class="pt-4 p-1 text-dark"><b class=""><i class="bi bi-stack-overflow"></i> Стек:</b> Java, Swift, React. <b class="text-dark">БД:</b> PostgreSQL, MongoDB, Redis.</h5>
+              <h5 class="pt-0 p-1 text-dark"><b class="text-dark"><i class="bi bi-git"></i> Дополнительно:</b> Sonatype Nexus, SonarQube, ELK-стек, WSO2 API Manager.</h5>
+              <h5 class="pt-0 p-1 text-dark"><b class="text-dark"><i class="bi bi-diagram-2-fill"></i> Системы совместной работы:</b> Jira, Confluence, Bitbucket, Bamboo.</h5>
               <hr>
-              <h3 class="p-2 text-white text-center">Мы предлагаем:</h3>
+              <h3 class="p-2 text-dark text-center">Мы предлагаем:</h3>
 <ol class="list-counter-circle">
     <li class="we"><i class="bi bi-dice-1-fill pe-1"></i> удаленный формат работы и гибкий график;</li>
     <li class="we"><i class="bi bi-dice-2-fill pe-1"></i> современная техника для работы;</li>
@@ -212,7 +212,7 @@ border-radius: 1.25rem;
     <li class="we"><i class="bi bi-trophy-fill pe-1"></i> конечно же полный соц.пакет, бонусы и корпоративы.</li>
               </ol>
               <hr>
-              <span class="lead text-center text-white row">
+              <span class="lead text-center text-dark row">
                   <div class="col-sm-12 col-md-6"><i class="bi bi-signpost-2-fill"></i> <big>Присоединяйся к команде!</big>  </div>   
                   <div class="col-sm-12 col-md-6">
                       <div class="px-2 pt-2 justify-content-end justify-content-sm-center text-end">
