@@ -124,6 +124,7 @@
         <!-- navbar area -->
     </header>
     <!-- End Header Area -->
+    
 <!-- Модальное окно -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-fullscreen-md-down modal-dialog-centered modal-dialog-scrollable">
@@ -135,102 +136,72 @@
         </div>
       </div>
       <div class="modal-body">
-  <form class="needs-validation" novalidate>
+ <form action="" onsubmit="return sendtelegram()">
           <div class="row g-3">
             <div class="col-sm-6">
-              <label for="firstName" class="form-label">Фамилия</label>
-              <input type="text" class="form-control" id="firstName" placeholder="Фамилия" value="" required>
-              <div class="invalid-feedback">
-                Valid first name is required.
-              </div>
+              <label class="form-label">Фамилия</label>
+              <input type="text" class="form-control" id="firstName" placeholder="Фамилия" min="2" name="firstNamename" value="" required>
             </div>
 
             <div class="col-sm-6">
-              <label for="lastName" class="form-label">Имя</label>
-              <input type="text" class="form-control" id="lastName" placeholder="Имя" value="" required>
-              <div class="invalid-feedback">
-                Valid last name is required.
-              </div>
+              <label class="form-label">Имя</label>
+              <input type="text" class="form-control" id="lastName" name="lastNamename" min="2" placeholder="Имя" value="" required>
             </div>
 
             <div class="col-12">
-              <label for="username" class="form-label">Telegram</label>
+              <label class="form-label">Telegram</label>
               <div class="input-group has-validation">
                 <span class="input-group-text">@</span>
-                <input type="text" class="form-control" id="username" placeholder="telegram" required>
-              <div class="invalid-feedback">
-                  Your username is required.
-                </div>
+                <input type="text" class="form-control" id="telegram" name="telegramname" min="5" placeholder="telegram" required>
               </div>
             </div>
 
             <div class="col-12">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
-              <div class="invalid-feedback">
-                Please enter a valid email address for shipping updates.
-              </div>
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="emailname" placeholder="you@example.com" required>
             </div>
 
             <div class="col-12">
-              <label for="address" class="form-label">Компания <span class="text-muted">(Опционально)</span></label>
-              <input type="text" class="form-control" id="address" placeholder="Моя компания">
-              <div class="invalid-feedback">
-                Please enter your shipping address.
-              </div>
+              <label class="form-label">Компания <span class="text-muted">(Опционально)</span></label>
+              <input type="text" class="form-control" id="comp" name="compname" min="3" placeholder="Моя компания">
             </div>
               
             <div class="col-md-5">
-              <label for="country" class="form-label">Страна</label>
+              <label class="form-label">Страна</label>
               <select class="form-select" id="country" required>
-                <option value="">Выбрать...</option>
-                <option>Беларусь</option>
-                <option>Россия</option>
-                <option>Грузия</option>
-                <option>другая...</option>
+                <option value="Беларусь">Беларусь</option>
+                <option value="Россия">Россия</option>
+                <option value="another">другая...</option>
               </select>
-              <div class="invalid-feedback">
-                Please select a valid country.
-              </div>
             </div>
 
             <div class="col-md-7">
-              <label for="username" class="form-label">Телефон</label>
+              <label class="form-label">Телефон</label>
               <div class="input-group has-validation">
                 <span class="input-group-text">+</span>
-                <input type="text" class="form-control" id="username" placeholder="375001234567" required>
-              <div class="invalid-feedback">
-                  Your username is required.
-                </div>
+                <input type="number" class="form-control" id="phone" name="phonename" placeholder="375001234567" required>
               </div>
             </div>
 
             <div class="col-12">
-              <label for="state" class="form-label">Тариф</label>
+              <label class="form-label">Тариф</label>
               <select class="form-select" id="state" required>
-                <option value="">Выбрать...</option>
-                <option>Месячный</option>
-                <option>Стандартный</option>
-                <option>Командный</option>
+                <option value="Месячный">Месячный</option>
+                <option value="Стандартный">Стандартный</option>
+                <option value="Командный">Командный</option>
               </select>
-              <div class="invalid-feedback">
-                Please provide a valid state.
-              </div>
             </div>
 
             <div class="col-12">
-              <label for="zip" class="form-label">Напишите свой вопрос</label>
-              <textaria rows="5" class="form-control" id="zip" placeholder="" style="height:164px;" required></textaria>
-              <div class="invalid-feedback">
-                Zip code required.
-              </div>
+              <label class="form-label">Напишите свой вопрос</label>
+              <textarea type="text" rows="5" class="form-control" name="zipname" id="zip" required min="20" style="height:164px;"></textarea>
             </div>
           </div>
 
           <hr class="my-4">
 
             <div class="button">
-                <button class="btn w-100" type="submit">Отправить</button>
+                <button class="btn w-100 send-them" type="submit" name="submit" id="submit2" value="Submit" onsubmit="return sendtelegram()">Отправить</button>
             </div>
         </form>
 
@@ -238,7 +209,82 @@
     </div>
   </div>
 </div>
+   <div class="toast-container position-fixed top-0 end-0 p-3">
+<div class="toast text-white bg-dark" id="liveToast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header bg-warning text-dark">
+    <i class="bi bi-robot rounded me-2"></i>
+    <strong class="me-auto lang-51" data-label="Bot Want 2 IT">Бот Want 2 IT</strong>
+    <small class="text-muted">now</small>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+  </div>
+  <div class="toast-body lang-52" data-label="Your application is accepted! You will be contacted shortly!">
+    Ваша заявка принята! С Вами свяжутся в ближайшее время!
+  </div> 
+</div>
+</div>
+      <script>
+        const toastTrigger = document.getElementById('submit2')
+        const toastLiveExample = document.getElementById('liveToast')
+        if (toastTrigger) {
+          toastTrigger.addEventListener('click', () => {
+            const toast = new bootstrap.Toast(toastLiveExample)
     
+            toast.show()
+          })
+        }
+      </script>
+     <script type="text/javascript" src="https://want2it.online/assets/js/jquery.js"></script>
+    
+<script type="text/javascript">
+var telegram_bot_id = "5213960366:AAFMCAefnk1sgU-hyZBSIS5II3-IOVC5N20";
+var chat_id = -1001423432956;
+var f_name, l_name, tg_data, mail, com, countr, phon, stat, message;
+var ready = function() {
+    f_name = document.getElementById("firstName").value;
+    l_name = document.getElementById("lastName").value;
+    tg_data = document.getElementById("telegram").value;
+    mail = document.getElementById("email").value;
+    com = document.getElementById("comp").value;
+    countr = document.getElementById("country").value;
+    phon = document.getElementById("phone").value;
+    stat = document.getElementById("state").value;
+    message = document.getElementById("zip").value;
+    message = "Фамилия Имя: " + l_name + ' ' + f_name + " из "+ com + " ("+countr+") Оставил(-а) запрос на сайте по тарифу "+ stat +":\n" + message + "\n\nКонтакты для связи: @" + tg_data + "\nE-mail: " + mail + "\nТелефон: " + phon;
+};
+var sendtelegram = function() {
+    ready();
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
+        "method": "POST",
+        "headers": {
+            "Content-Type": "application/json",
+            "cache-control": "no-cache"
+        },
+        "data": JSON.stringify({
+            "chat_id": chat_id,
+            "text": message
+        })
+    };
+    $.ajax(settings).done(function(response) {
+        console.log(response);
+    });
+    document.getElementById("firstName").value = "";
+    document.getElementById("lastName").value = "";
+    document.getElementById("telegram").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("comp").value = "";
+    document.getElementById("country").value = "";
+    document.getElementById("phone").value = "";
+    document.getElementById("state").value = "";
+    document.getElementById("zip").value = "";
+    return false;
+    
+};
+
+</script> 
+     
 
     <!-- Start Hero Area -->
     <section class="hero-area">
