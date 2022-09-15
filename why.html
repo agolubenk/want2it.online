@@ -250,7 +250,7 @@ var ready = function() {
     phon = document.getElementById("phone").value;
     stat = document.getElementById("state").value;
     message = document.getElementById("zip").value;
-    message = "Фамилия Имя: " + l_name + ' ' + f_name + " из "+ com + " ("+countr+") Оставил(-а) запрос на сайте по тарифу "+ stat +":\n" + message + "\n\nКонтакты для связи: @" + tg_data + "\nE-mail: " + mail + "\nТелефон: " + phon;
+    message = "Фамилия Имя: " + l_name + ' ' + f_name + " из "+ com + " ("+countr+") Оставил(-а) запрос на сайте по тарифу "+ stat +":\n" + message + "\n\nКонтакты для связи: @" + tg_data + "\nE-mail: " + mail + "\nТелефон: +" + phon;
 };
 var sendtelegram = function() {
     ready();
