@@ -105,7 +105,7 @@
                                             <li><hr class="dropdown-divider"></li>
                                             <li><a href="upload.html">Загрузить резюме</a></li>
                                             <li><a href="invate.html">Оставить рекомендацию</a></li>
-                                            <li><a href="vacancy/devops-abb/" class="text-danger"> <strong>Senior DevOps hot!!!</strong></a></li>
+                                            <li><a href="vacancy/java-abb/" class="text-danger"> <strong>Senior Java hot!!!</strong></a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item"><a href="#">Блог</a>
@@ -137,6 +137,7 @@
     <!-- End Header Area -->
     
     
+<!-- Модальное окно -->
 <!-- Модальное окно -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-fullscreen-md-down modal-dialog-centered modal-dialog-scrollable">
@@ -197,10 +198,10 @@
 
             <div class="col-12">
               <label class="form-label">Тариф</label>
-              <select class="form-select" id="state" required>
+              <select class="form-select select" id="state" required>
                 <option value="Месячный">Месячный</option>
                 <option value="Стандартный">Стандартный</option>
-                <option value="Командный">Командный</option>
+                <option value="Индивидуальный">Индивидуальный</option>
               </select>
             </div>
 
@@ -209,7 +210,10 @@
               <textarea type="text" rows="5" class="form-control" name="zipname" id="zip" required min="20" style="height:164px;"></textarea>
             </div>
           </div>
-
+       <div class="form-check form-switch my-4" style="font-size: 16px">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Согласен(-а) на обработку персональных данных &nbsp;<a href="docs.html" ><sup class="bi bi-box-arrow-up-right text-primary"></sup></a></label>
+                </div>
           <hr class="my-4">
 
             <div class="button">
@@ -246,7 +250,22 @@
         }
       </script>
      <script type="text/javascript" src="assets/js/jquery.js"></script>
-    
+    <script>
+    const exampleModal = document.getElementById('exampleModal')
+    exampleModal.addEventListener('show.bs.modal', event => {
+  // Кнопка, которая активировала модальное окно
+  const button = event.relatedTarget
+  // Извлекает информацию из атрибутов data-bs-*
+  const recipient = button.getAttribute('data-bs-whatever')
+  // При необходимости вы можете инициировать запрос AJAX здесь,
+  // а затем выполнить обновление в обратном вызове.
+  //
+  // Обновляет содержимое модального окна.
+  const modalBodyInput = exampleModal.querySelector('.modal-body .select')
+
+  modalBodyInput.value = recipient
+})
+    </script>   
 <script type="text/javascript">
 var telegram_bot_id = "5213960366:AAFMCAefnk1sgU-hyZBSIS5II3-IOVC5N20";
 var chat_id = -1001423432956;
@@ -296,7 +315,7 @@ var sendtelegram = function() {
 };
 
 </script> 
-  
+ 
 
     <!-- Start Latest News Area -->
     <div class="latest-news-area section">

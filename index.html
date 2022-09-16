@@ -106,7 +106,7 @@
                                             <li><hr class="dropdown-divider"></li>
                                             <li><a href="upload.html">Загрузить резюме</a></li>
                                             <li><a href="invate.html">Оставить рекомендацию</a></li>
-                                            <li><a href="vacancy/devops-abb/" class="text-danger"> <strong>Senior DevOps hot!!!</strong></a></li>
+                                            <li><a href="vacancy/java-abb/" class="text-danger"> <strong>Senior Java hot!!!</strong></a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item"><a href="#">Блог</a>
@@ -138,6 +138,7 @@
     <!-- End Header Area -->
     
 
+<!-- Модальное окно -->
 <!-- Модальное окно -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-fullscreen-md-down modal-dialog-centered modal-dialog-scrollable">
@@ -198,10 +199,10 @@
 
             <div class="col-12">
               <label class="form-label">Тариф</label>
-              <select class="form-select" id="state" required>
+              <select class="form-select select" id="state" required>
                 <option value="Месячный">Месячный</option>
                 <option value="Стандартный">Стандартный</option>
-                <option value="Командный">Командный</option>
+                <option value="Индивидуальный">Индивидуальный</option>
               </select>
             </div>
 
@@ -210,7 +211,10 @@
               <textarea type="text" rows="5" class="form-control" name="zipname" id="zip" required min="20" style="height:164px;"></textarea>
             </div>
           </div>
-
+       <div class="form-check form-switch my-4" style="font-size: 16px">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Согласен(-а) на обработку персональных данных &nbsp;<a href="docs.html" ><sup class="bi bi-box-arrow-up-right text-primary"></sup></a></label>
+                </div>
           <hr class="my-4">
 
             <div class="button">
@@ -247,7 +251,22 @@
         }
       </script>
      <script type="text/javascript" src="assets/js/jquery.js"></script>
-    
+    <script>
+    const exampleModal = document.getElementById('exampleModal')
+    exampleModal.addEventListener('show.bs.modal', event => {
+  // Кнопка, которая активировала модальное окно
+  const button = event.relatedTarget
+  // Извлекает информацию из атрибутов data-bs-*
+  const recipient = button.getAttribute('data-bs-whatever')
+  // При необходимости вы можете инициировать запрос AJAX здесь,
+  // а затем выполнить обновление в обратном вызове.
+  //
+  // Обновляет содержимое модального окна.
+  const modalBodyInput = exampleModal.querySelector('.modal-body .select')
+
+  modalBodyInput.value = recipient
+})
+    </script>   
 <script type="text/javascript">
 var telegram_bot_id = "5213960366:AAFMCAefnk1sgU-hyZBSIS5II3-IOVC5N20";
 var chat_id = -1001423432956;
@@ -297,8 +316,7 @@ var sendtelegram = function() {
 };
 
 </script> 
-
-     
+    
 
     <!-- Start Hero Area -->
     <section class="hero-area">
@@ -512,15 +530,15 @@ var sendtelegram = function() {
                     </div>
                 </div>
             </div>
-            <div class="row">
+                        <div class="row" style="margin-top: -40px">
                 <div class="col-lg-4 col-md-6 col-12">
                     <!-- Single Table -->
                     <div class="single-table wow fadeInUp" data-wow-delay=".2s" style="border-radius: 2em">
                         <!-- Table Head -->
                         <div class="table-head">
-                            <h4 class="title">Месячный&nbsp;<a href="price.html#price"><sup class="bi bi-box-arrow-up-right text-primary"></sup></a></h4>
+                            <h4 class="title ms-3" >Месячный &nbsp;<sup><a href="price.html#price" class="text-info"><i class="bi bi-box-arrow-up-right"></i></a></sup></h4>
                             <div class="price">
-                                <p class="amount">$3500<span class="duration"> в месяц</span></p>
+                                <p class="amount">$3500<span class="duration"> / месяц</span></p>
                             </div>
                         </div>
                         <!-- End Table Head -->
@@ -534,7 +552,7 @@ var sendtelegram = function() {
                         <!-- End Table List -->
                         <!-- Table Bottom -->
                         <div class="button">
-                            <a class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Оставить заявку</a>
+                            <a class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="Месячный">Оставить заявку</a>
                         </div><br>
                         <hr>
                             <div class="price">
@@ -548,9 +566,9 @@ var sendtelegram = function() {
                     <div class="single-table wow fadeInUp" data-wow-delay=".4s" style="border-radius: 2em">
                         <!-- Table Head -->
                         <div class="table-head">
-                            <h4 class="title">Стандартный&nbsp;<a href="price.html#price" ><sup class="bi bi-box-arrow-up-right text-primary"></sup></a></h4>
+                            <h4 class="title ms-3" >Стандартный &nbsp;<sup><a href="price.html#price" class="text-info"><i class="bi bi-box-arrow-up-right"></i></a></sup></h4>
                             <div class="price">
-                                <p class="amount">от $850<span class="duration"> за вакансию</span></p>
+                                <p class="amount">от $720<span class="duration"> / вакансию</span></p>
                             </div>
                         </div>
                         <!-- End Table Head -->
@@ -564,7 +582,7 @@ var sendtelegram = function() {
                         <!-- End Table List -->
                         <!-- Table Bottom -->
                         <div class="button">
-                            <a class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Оставить заявку</a>
+                            <a class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="Стандартный">Оставить заявку</a>
                         </div><br>
                         <hr>
                             <div class="price">
@@ -579,23 +597,23 @@ var sendtelegram = function() {
                     <div class="single-table wow fadeInUp" data-wow-delay=".6s" style="border-radius: 2em">
                         <!-- Table Head -->
                         <div class="table-head">
-                            <h4 class="title">Команда&nbsp;<a href="price.html#price" ><sup class="bi bi-box-arrow-up-right text-primary"></sup></a></h4>
+                            <h4 class="title ms-3" >Индивидуальный &nbsp;<sup><a href="price.html#price" class="text-info"><i class="bi bi-box-arrow-up-right"></i></a></sup></h4>
                             <div class="price">
-                                <p class="amount">от 2% ЗП<sup class="text-muted" style="font-style: italic"> годовой</sup><span class="duration"> за специалиста</span></p>
+                                <p class="amount">от $650<span class="duration"> / вакансию</span></p>
                             </div>
                         </div>
                         <!-- End Table Head -->
                         <!-- Table List -->
                         <ul class="table-list">
-                            <li>Поиск менеджеров и лидов</li>
-                            <li>Подбор сплоченной команды</li>
-                            <li>Не более 5 кандидатов в месяц</li>
-                            <li>Гибкость тарифных планов</li>
+                            <li>Персональные условия</li>
+                            <li>Предоплата 25%</li>
+                            <li>От 5 вакансий</li>
+                            <li>Гарантийная замена</li>
                         </ul>
                         <!-- End Table List -->
                         <!-- Table Bottom -->
                         <div class="button">
-                            <a class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Оставить заявку</a>
+                            <a class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="Индивидуальный">Оставить заявку</a>
                         </div><br>
                         <hr>
                             <div class="price">
@@ -606,6 +624,22 @@ var sendtelegram = function() {
                     <!-- End Single Table-->
                 </div>
             </div>
+    <script>
+    const exampleModal = document.getElementById('exampleModal')
+    exampleModal.addEventListener('show.bs.modal', event => {
+  // Кнопка, которая активировала модальное окно
+  const button = event.relatedTarget
+  // Извлекает информацию из атрибутов data-bs-*
+  const recipient = button.getAttribute('data-bs-whatever')
+  // При необходимости вы можете инициировать запрос AJAX здесь,
+  // а затем выполнить обновление в обратном вызове.
+  //
+  // Обновляет содержимое модального окна.
+  const modalBodyInput = exampleModal.querySelector('.modal-body .select')
+
+  modalBodyInput.value = recipient
+})
+    </script>
         </div>
     </section>
     <!--/ End Pricing Table Area -->
