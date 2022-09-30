@@ -930,10 +930,30 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
                 {}
                 );
                 let ad = param['window'];
-                if (ad=='open'){
+                if (ad=='Месячный'){
                     $('#exampleModal').modal('show');
                 }
+                if (ad=='Стандартный'){
+                    $('#exampleModal').modal('show');
+                }
+                if (ad=='Индивидуальный'){
+                    $('#exampleModal').modal('show');
+                };         
+                const exampleModal = document.getElementById('exampleModal')
+                exampleModal.addEventListener('show.bs.modal', event => {
+  // Кнопка, которая активировала модальное окно
+  // Извлекает информацию из атрибутов data-bs-*
+  // При необходимости вы можете инициировать запрос AJAX здесь,
+  // а затем выполнить обновление в обратном вызове.
+  //
+  // Обновляет содержимое модального окна.
+                const modalBodyInput = exampleModal.querySelector('.modal-body .select')
+                modalBodyInput.value = ad
+                })
+    
             });
+
+
     </script>
 </body>
 
