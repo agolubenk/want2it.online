@@ -538,7 +538,7 @@ var sendtelegram = function() {
                         <div class="table-head">
                             <h4 class="title ms-3" >Месячный &nbsp;<sup><a href="price.html#price" class="text-info"><i class="bi bi-box-arrow-up-right"></i></a></sup></h4>
                             <div class="price">
-                                <p class="amount">$3500<span class="duration"> / месяц</span></p>
+                                <p class="amount">$1500<span class="duration"> / месяц</span></p>
                             </div>
                         </div>
                         <!-- End Table Head -->
@@ -568,7 +568,7 @@ var sendtelegram = function() {
                         <div class="table-head">
                             <h4 class="title ms-3" >Стандартный &nbsp;<sup><a href="price.html#price" class="text-info"><i class="bi bi-box-arrow-up-right"></i></a></sup></h4>
                             <div class="price">
-                                <p class="amount">от $720<span class="duration"> / вакансию</span></p>
+                                <p class="amount">от $520<span class="duration"> / вакансию</span></p>
                             </div>
                         </div>
                         <!-- End Table Head -->
@@ -599,7 +599,7 @@ var sendtelegram = function() {
                         <div class="table-head">
                             <h4 class="title ms-3" >Индивидуальный &nbsp;<sup><a href="price.html#price" class="text-info"><i class="bi bi-box-arrow-up-right"></i></a></sup></h4>
                             <div class="price">
-                                <p class="amount">от $650<span class="duration"> / вакансию</span></p>
+                                <p class="amount">от $450<span class="duration"> / вакансию</span></p>
                             </div>
                         </div>
                         <!-- End Table Head -->
@@ -918,6 +918,22 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             'width': 900,
             'autoplayVideos': true,
         });
+    </script>
+ <script>
+            $(window).on('load',function(){
+               var param = window.location.search.replace('?','').split('&').reduce(
+                function(pp,ee){
+                    var aa = ee.split('=');
+                    pp[ decodeURIComponent(aa[0])] = decodeURIComponent(aa[1]);
+                    return pp;
+                },
+                {}
+                );
+                let ad = param['window'];
+                if (ad=='open'){
+                    $('#exampleModal').modal('show');
+                }
+            });
     </script>
 </body>
 
